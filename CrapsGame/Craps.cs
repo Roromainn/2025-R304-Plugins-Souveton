@@ -5,8 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrapsGame
+namespace Plugin
 {
+    
+    public static class Init
+    {
+        public static void Register()
+        {
+            GamesFactory.Instance.Register("Craps", new CreateCraps());
+        }
+    }
+    
     /// <summary>
     /// Craps game : player throw dices and their values make him win or loose (pure random game)
     /// </summary>
