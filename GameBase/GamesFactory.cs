@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LittleGames
+namespace GameBase
 {
     /// <summary>
     /// Fabrique de jeux (singleton)

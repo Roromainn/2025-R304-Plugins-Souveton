@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using GameBase;
 using LittleGames;
 
 IConsole console = new SimpleConsole();
