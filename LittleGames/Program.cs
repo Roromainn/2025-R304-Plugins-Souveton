@@ -3,5 +3,7 @@ using LittleGames;
 
 IConsole console = new SimpleConsole();
 Games games = new Games(console);
+games.AddGame(new GuessIT());
+games.AddGame(new Craps());
 games.Run();
 Console.WriteLine("Good bye");

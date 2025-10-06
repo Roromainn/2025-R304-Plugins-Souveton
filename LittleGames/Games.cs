@@ -10,10 +10,19 @@ namespace LittleGames
     /// <summary>
     /// Can play many games
     /// </summary>
-    public class Games
+    public class Games 
     {
+        /// <summary>
+        /// Dictionnaire des jeux
+        /// </summary>
         private Dictionary<string,IGame> games;
+        /// <summary>
+        /// Console dans laquelle ca se passe
+        /// </summary>
         private IConsole console;
+        /// <summary>
+        /// Score du jeu
+        /// </summary>
         private int score;
 
         /// <summary>
@@ -24,10 +33,7 @@ namespace LittleGames
         {
             this.console = console;
             games = new Dictionary<string, IGame>();
-            score= 0;
-
-            AddGame(new GuessIT());
-            AddGame(new Craps());                     
+            score= 0;                   
         }
 
         /// <summary>
@@ -57,5 +63,6 @@ namespace LittleGames
             string msg = string.Format("Games ended. Your final score is {0}", score);
             console.Write(msg);
         }
+
     }
 }

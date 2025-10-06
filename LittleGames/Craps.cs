@@ -63,5 +63,14 @@ namespace LittleGames
             console.Pause(string.Format("dices : {0}", dices));
             return dices;
         }
+
+    }
+
+    public class CreateCraps : ICreateGame
+    {
+        public IGame CreateGame()
+        {
+            return new Craps();      
+        }
     }
 }

@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace LittleGames
 {
+    public interface ICreateGame
+    {
+        /// <summary>
+        /// Create a new game
+        /// </summary>
+        /// <returns></returns>
+        IGame CreateGame();
+    }
+
+
     /// <summary>
     /// A simple game
     /// </summary>

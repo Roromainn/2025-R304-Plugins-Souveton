@@ -25,17 +25,17 @@ namespace LittleGames
             console.Write("I've choose a number between 1 and 100. Try to guess it !");
             bool found = false;
             int tries = 0;
-            while(!found && tries<5)
+            while (!found && tries < 5)
             {
                 ++tries;
                 string? s = console.ReadLine("Your guess : ");
                 int val = Convert.ToInt32(s);
-                if(val==value)
+                if (val == value)
                 {
                     console.Write("You win !");
                     found = true;
                 }
-                else if(val<value)
+                else if (val < value)
                 {
                     console.Write("Too small !");
                 }
@@ -47,8 +47,16 @@ namespace LittleGames
             if (found)
                 score = 5 - tries;
             else
-                console.Write(string.Format("You loose, it was {0}",value));
+                console.Write(string.Format("You loose, it was {0}", value));
             return score;
+        }
+    }
+
+    public class CreateGuessIT : ICreateGame
+    {
+        public IGame CreateGame()
+        {
+            return new GuessIT();
         }
     }
 }
